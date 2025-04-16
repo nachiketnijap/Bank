@@ -4,12 +4,14 @@ const connectToDB = require("./database/db");
 const authRoutes =require("./routes/auth-route")
 const accounRoutes =require("./routes/account-route")
 const bankerRoutes =require("./routes/bank-route")
+const cors=require('cors')
 connectToDB();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 //Middlewares
+app.use(cors());
 app.use(express.json());
 
 
