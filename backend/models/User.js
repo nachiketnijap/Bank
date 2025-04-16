@@ -24,6 +24,10 @@ const UserSchema = new mongoose.Schema(
       enum: ["banker", "customer"], // only allow 'banker' or 'customer' roles
       default: "customer",
     },
+    balance:{
+      type: Number,
+      required: true,
+    },
   },
   { timestamps: true }
 );
