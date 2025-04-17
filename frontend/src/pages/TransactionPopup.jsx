@@ -24,7 +24,6 @@ const TransactionPopup = ({ type, onClose }) => {
             alert(error.response.data.message);
             onClose()
           }
-        console.log("error is::"+error);
         
     }
     
