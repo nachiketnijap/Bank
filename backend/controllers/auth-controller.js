@@ -91,6 +91,7 @@ const loginUser = async (req, res) => {
     );
 
     res.status(200).json({
+      user:user.role,
       success: true,
       message: "Logged in successful",
       accessToken,

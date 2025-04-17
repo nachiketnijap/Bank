@@ -23,8 +23,13 @@ const Login = () => {
       alert('Login successful!');
 
       localStorage.setItem('token', data.accessToken);
+      if(data.user=='banker'){
+        navigate('/dashboard');
+      }else{
+        navigate('/home')
+      }
 
-      navigate('/home');
+      
     } catch (err) {
       if (err.response && err.response.data) {
         setError(err.response.data.message || 'Login failed');
